@@ -1,0 +1,41 @@
+/* Projects.css */
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .project-box {
+    width: 30%; /* 3 boxes per row */
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 20px; /* Slightly larger text */
+    font-weight: 600; /* Bolder text */
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 1px; /* Adds space between letters for readability */
+    line-height: 1.5; /* Increases line spacing for better text flow */
+  }
+  
+  .project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0; /* Slight background color change on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .project-box {
+      width: 100%; /* Full width for mobile view */
+      margin-bottom: 20px;
+    }
+  }
+  

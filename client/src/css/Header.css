@@ -1,0 +1,75 @@
+
+/* Navbar container */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 1000; /* Ensures it stays on top of other content */
+box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Navbar brand */
+.navbar .brand {
+font-size: 2.5rem;
+font-weight: bold;
+color: #333; /* Adjust color as needed */
+}
+
+/* Navbar links container */
+.navbar .nav-links {
+display: flex;
+gap: 1rem;
+}
+
+/* Navbar links */
+.navbar .nav-links a {
+text-decoration: none;
+color: #333; /* Adjust color as needed */
+padding: 0.5rem 1rem;
+border-radius: 0.3rem;
+}
+
+/* Burger menu styles */
+.burger-menu {
+display: none;
+cursor: pointer;
+}
+
+.burger-menu div {
+width: 2rem;
+height: 0.2rem;
+background: #333; /* Adjust color as needed */
+margin: 0.3rem 0;
+transition: 0.3s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+.navbar .nav-links {
+    display: none; /* Hide links on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9); /* Background for dropdown */
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for dropdown */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+.navbar .nav-links.active {
+    display: flex;
+}
+
+.burger-menu {
+    display: block;
+}
+}

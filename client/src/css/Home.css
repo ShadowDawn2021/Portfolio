@@ -1,0 +1,75 @@
+/* Body styles */
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Optional: Set a default font */
+    background-color:aliceblue
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: row; /* Align items in a row by default */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    gap: 20px; /* Space between items */
+}
+
+/* Text container styles */
+.text-container {
+    flex: 1; /* Allow text to take up remaining space */
+    margin-right: 10em;
+    padding: 0 10px 0 10px;
+}
+
+/* Image container styles */
+.image-container {
+    display: flex;
+    align-items: center; /* Center the image vertically within its container */
+}
+
+/* Text styles */
+.text-container h1,h2, .text-container p {
+    margin: 0; /* Remove default margins */
+}
+
+.quote{
+    
+}
+
+/* Heading styles */
+h1 {
+    color: #213547;
+}
+
+/* Profile picture styles */
+.profilePicture {
+    width: 20em; /* Adjust size as needed */
+    height: 20em; /* Adjust size as needed */
+    border-radius: 40%; /* Makes the image circular */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {  
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 10px; /* Adjust spacing between stacked items */
+    }
+
+    .profilePicture {
+        width: 15em; /* Adjust size for smaller screens */
+        height: 15em; /* Adjust size for smaller screens */
+    }
+
+    .text-container{
+        margin: 0
+    }
+
+    .text-container h1 {
+        font-size: 1.5em;
+    }
+}
