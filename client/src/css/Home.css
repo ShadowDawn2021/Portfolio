@@ -30,6 +30,7 @@ body {
 .image-container {
     display: flex;
     align-items: center; /* Center the image vertically within its container */
+    padding-right: 1em;
 }
 
 /* Text styles */

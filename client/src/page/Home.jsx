@@ -11,7 +11,7 @@ function Home() {
       <div className='text-container'>
         <h1>Christian Avery Calayag</h1>
         <h2>Junior Web Developer</h2>
-        <i className='quote'>"My knowledge, skills, and ChatGPT—embracing technology to stay efficient in the fast-paced world of innovation."</i>
+        <i className='quote'>"My knowledge, skills, and ChatGPT against the world—embracing technology to stay efficient in the fast-paced world of innovation."</i>
 
       </div>
       <div className='image-container'>

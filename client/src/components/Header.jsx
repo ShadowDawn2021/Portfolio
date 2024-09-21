@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <nav className='navbar'>
-      <div className='brand'>Portfolio</div>
+      <Link to='/' className='brand'><div className='brand'>Portfolio</div></Link>
       <div className={`nav-links ${isOpen ? 'active' : ''}`}>
         <Link to='/'>Home</Link>
         <Link to='/projects'>Projects</Link>
