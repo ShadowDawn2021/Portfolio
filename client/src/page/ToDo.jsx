@@ -6,17 +6,19 @@ function ToDo() {
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState('');
 
-  const fetchData=()=>{
+  const fetchData = () => {
     axios.get("http://localhost:8080/api/todos")
-    .then(res=>{
-        setTodos(res.data)
-    }).catch(err=>{
-        console.log(err)
-    })
+      .then(res => {
+        setTodos(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
-  useEffect(()=>{
-      fetchData();
-  },[])
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const addTodo = () => {
     axios.post('http://localhost:8080/api/todos', { title: newTodo })
@@ -51,27 +53,30 @@ function ToDo() {
   };
 
   return (
-    <div>
+    <div className="todo-container">
       <Header />
-      <h1>To-Do List</h1>
-      <input
-        type="text"
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-      />
-      <button onClick={addTodo}>Add</button>
-      <br />
-      <span>When Completed. Click on the name to mark as complete</span>
-      <ul>
+      <h1 className="todo-title">To-Do List</h1>
+      <div className="todo-input-container">
+        <input
+          className="todo-input"
+          type="text"
+          value={newTodo}
+          onChange={(e) => setNewTodo(e.target.value)}
+          placeholder="Add new task"
+        />
+        <button className="todo-add-button" onClick={addTodo}>Add</button>
+      </div>
+      <span className="todo-instruction">Click on the item to mark as complete</span>
+      <ul className="todo-list">
         {todos.map((todo) => (
-          <li key={todo._id}>
+          <li key={todo._id} className="todo-item">
             <span
-              style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+              className={`todo-title-item ${todo.completed ? 'completed' : ''}`}
               onClick={() => toggleComplete(todo._id)}
             >
               {todo.title}
             </span>
-            <button onClick={() => deleteTodo(todo._id)}>Delete</button>
+            <button className="todo-delete-button" onClick={() => deleteTodo(todo._id)}>Delete</button>
           </li>
         ))}
       </ul>

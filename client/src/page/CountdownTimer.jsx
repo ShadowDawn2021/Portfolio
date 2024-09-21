@@ -1,6 +1,7 @@
-import React, { useState, useEffect }  from 'react'
-import Header from '../components/Header'
+import React, { useState, useEffect } from 'react';
+import Header from '../components/Header';
 import axios from 'axios';
+import '../css/CountdownTimer.css'
 
 function CountdownTimer() {
   const [timeRemaining, setTimeRemaining] = useState(null);
@@ -43,24 +44,26 @@ function CountdownTimer() {
     const seconds = Math.floor((ms % 60000) / 1000);
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
+
   return (
     <div>
-      <Header/>
-      <div>
-      <h1>Countdown Timer</h1>
-      <div>
-        {timeRemaining !== null ? formatTime(timeRemaining) : 'Loading...'}
-      </div>
-      <input
-        type="number"
-        value={newTime}
-        onChange={(e) => setNewTime(e.target.value)}
-        placeholder="Set minutes"
-      />
-      <button onClick={setTimer}>Set Timer</button>
+      <Header />
+      <div className="countdown-timer-container">
+        <h1 className="countdown-title">Countdown Timer</h1>
+        <div className="time-display">
+          {timeRemaining !== null ? formatTime(timeRemaining) : 'Loading...'}
+        </div>
+        <input
+          className="time-input"
+          type="number"
+          value={newTime}
+          onChange={(e) => setNewTime(e.target.value)}
+          placeholder="Set minutes"
+        />
+        <button className="set-timer-button" onClick={setTimer}>Set Timer</button>
       </div>
     </div>
-  )
+  );
 }
 
-export default CountdownTimer
+export default CountdownTimer;
