@@ -13,7 +13,14 @@ function Projects() {
         <Link to="/ToDoList" className="project-box">To-Do List</Link>
         <Link to="/Countdown-timer" className="project-box">Countdown Timer</Link>
         <Link to="/BMI-Calculator" className="project-box">BMI Calculator</Link>
-        <Link className="project-box">FruitSource</Link>
+        <a 
+          href="https://fruitsource-ph.onrender.com/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="project-box"
+        >
+          FruitSource Website
+        </a>
       </div>
         
         
