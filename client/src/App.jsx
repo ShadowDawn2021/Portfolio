@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css'
 import Home from "./page/Home"
 import Projects from "./page/Projects"
+import Resume from "./page/ResumePage"
 import Weather from "./page/Weather"
 import Calculator from "./page/Calculator"
 import BMI from "./page/BmiCalculator"
@@ -15,6 +16,7 @@ function App() {
         <Routes>
 					<Route path="/" element={<Home />} />
           <Route path="/Projects" element={<Projects />} />
+          <Route path="/Resume" element={<Resume />} />
           <Route path="/Weather" element={<Weather/>}/>
           <Route path="/Calculator" element={<Calculator/>}/>
           <Route path="/BMI-Calculator" element={<BMI/>}/>

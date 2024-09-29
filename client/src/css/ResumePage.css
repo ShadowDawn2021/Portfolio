@@ -1,0 +1,10 @@
+.resumeImg{
+    margin-top: 10em;
+    width: 100%;
+}
+
+@media(max-width:768px){
+    .resumeImg{
+        margin-top: 0em;
+    }
+}
